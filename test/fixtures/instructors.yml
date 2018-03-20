@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+admin:
+  name: Admin
+  email: admin@admin.com
+  password_digest: <%= Instructor.digest('123456') %>
