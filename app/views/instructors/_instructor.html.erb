@@ -1,0 +1,10 @@
+<li>
+  <ul class="ul_two">
+     <li><%= link_to instructor.name, instructor %></li>
+     <li><%= link_to instructor.email, "mailto:" + instructor.email %></li>
+    <li> <% if current_instructor.admin? && !current_instructor?(instructor) %>
+     <%= link_to "delete", instructor, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+     <% end %></li>
+  </ul> 
+</li>

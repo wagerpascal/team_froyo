@@ -67,4 +67,8 @@ class InstructorTest < ActiveSupport::TestCase
     assert_not @instructor.valid?
   end
   
+  test "authenticated? should return false for an instructor with nil digest" do
+    assert_not @instructor.authenticated?('')
+  end
+  
 end
