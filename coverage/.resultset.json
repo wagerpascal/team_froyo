@@ -269,112 +269,19 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/ec2-user/environment/team_froyo/app/helpers/sessions_helper.rb": [
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/helpers/instructors_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/helpers/static_pages_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/helpers/application_helper.rb": [
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/mailers/application_mailer.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/connection.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/models/instructor.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/models/instructor.rb": [
         0,
         0,
         0,
@@ -411,7 +318,36 @@
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/instructors_controller.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/controllers/sessions_controller.rb": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/controllers/instructors_controller.rb": [
         0,
         0,
         0,
@@ -484,31 +420,16 @@
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/sessions_controller.rb": [
-        0,
-        0,
-        0,
-        null,
+      "/home/ubuntu/workspace/team_froyo/app/controllers/application_controller.rb": [
         0,
         0,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/static_pages_controller.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/controllers/static_pages_controller.rb": [
         0,
         0,
         0,
@@ -523,16 +444,95 @@
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/application_controller.rb": [
+      "/home/ubuntu/workspace/team_froyo/app/helpers/sessions_helper.rb": [
+        0,
+        null,
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/helpers/static_pages_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/helpers/instructors_helper.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/helpers/application_helper.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/team_froyo/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1521736331
+    "timestamp": 1521774268
   }
 }
