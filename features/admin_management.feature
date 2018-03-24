@@ -14,6 +14,9 @@ Feature: management by admin instructor
     When I am on the instructors page
     Then I should see "crazy"
     And I should see "delete"
+    When I select the delete for the crazy instructor
+    Then I should not see "crazy"
+    And I should see "Instructor deleted"
 
     
     

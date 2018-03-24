@@ -10,8 +10,8 @@ end
 
 def login_with(email, password)
     go_to_login
-    fill_in 'Email', :with => 'admin@admin.com'
-    fill_in 'Password', :with => '123456'
+    fill_in 'Email', :with => email
+    fill_in 'Password', :with => password
     click_button 'Log in'
 end
 
@@ -22,3 +22,12 @@ end
 When(/^I log in with admin's information$/) do
   login_with "admin@admin.com", "123456"
 end
+
+When(/^I log in with crazy's information$/) do
+  login_with "crazy@crazy.com", "mustbecrazy"
+end
+
+When(/^I select the delete for the crazy instructor$/) do
+    @instructor = Instructor.find_by(name: "crazy")
+    find(:xpath, "//a[@href='#{instructor_path(@instructor)}']", :text => "delete").click
+end 

@@ -22,7 +22,7 @@ module NavigationHelpers
     when /^the instructors page$/
       '/instructors'
       
-
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
