@@ -4,7 +4,7 @@ module SessionsHelper
     session[:instructor_id] = instructor.id
   end
   
-   def remember(instructor)
+  def remember(instructor)
     instructor.remember
     cookies.permanent.signed[:instructor_id] = instructor.id
     cookies.permanent[:remember_token] = instructor.remember_token
