@@ -79,6 +79,51 @@
         1,
         null
       ],
+      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/channel.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/connection.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/team_froyo/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/ec2-user/environment/team_froyo/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
       "/home/ec2-user/environment/team_froyo/app/jobs/application_job.rb": [
         1,
         null
@@ -130,18 +175,6 @@
         1,
         1,
         null
-      ],
-      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
       ],
       "/home/ec2-user/environment/team_froyo/app/controllers/instructors_controller.rb": [
         0,
@@ -216,30 +249,6 @@
         0,
         0
       ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/sessions_controller.rb": [
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0
-      ],
       "/home/ec2-user/environment/team_froyo/app/controllers/static_pages_controller.rb": [
         0,
         0,
@@ -254,18 +263,9 @@
         0,
         0,
         0
-      ],
-      "/home/ec2-user/environment/team_froyo/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1522647863
+    "timestamp": 1522648950
   },
   "Cucumber Features": {
     "coverage": {
@@ -533,6 +533,6 @@
         0
       ]
     },
-    "timestamp": 1522647869
+    "timestamp": 1522648945
   }
 }
