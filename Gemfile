@@ -36,6 +36,7 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
 end
 
 group :production do
