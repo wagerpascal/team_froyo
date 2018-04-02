@@ -11,3 +11,10 @@
 #     #assert_response :success
 #   end
 # end
+
+describe SessionsController, :type => :controller do
+    it "destroy should work as expected" do
+        
+    end
+end
+

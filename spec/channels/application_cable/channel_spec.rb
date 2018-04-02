@@ -1,4 +1,4 @@
-describe ApplicationCable do
-#   class Channel < ActionCable::Channel::Base
-#   end
+describe ApplicationCable::Channel do
+    let(:dummy_class) { Channel.new { include ApplicationCable } }
 end
+
