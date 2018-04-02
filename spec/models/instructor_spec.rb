@@ -84,9 +84,47 @@ describe Instructor do
   end
   
   describe "authenticate?" do
-    it 'works as expected' do
+    it 'works as expected for nil' do
         expect(@instructor.authenticated?('')).to be false
     end
+    
+    it 'works as expected for remember_token' do
+      @instructor.remember
+      a = BCrypt::Password.new(@instructor.remember_digest).is_password?(@instructor.remember_token )
+      expect(@instructor.authenticated?(@instructor.remember_token)).to eq(a)
+    end
   end
+  
+  
+  describe "digest" do
+    it "digest cost can be set to bcrypt min cost to speed up tests" do
+      ActiveModel::SecurePassword.min_cost = true
+      expect(Instructor.digest("string").cost).to eq(BCrypt::Engine::MIN_COST)
+    end
+    
+    it "digest cost defaults to bcrypt default cost when min_cost is false" do
+      ActiveModel::SecurePassword.min_cost = false
+      expect(Instructor.digest("string").cost).to eq(BCrypt::Engine.cost)
+    end
+  end
+  
+  
+  it 'new_token works as expected' do
+      expect(@instructor.authenticated?('')).to be false
+  end
+  
+  describe "remember token" do
+    before { @instructor.remember }
+    it { @instructor.remember_token.should_not be_blank }
+  end
+  
+  
+  describe "forget" do
+    it 'works as expected' do
+      tmp = @instructor.update_attribute(:remember_digest, nil)
+      expect(@instructor.forget).to eq(tmp)
+    end
+  end
+  
   
 end
