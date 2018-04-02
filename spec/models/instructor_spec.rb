@@ -83,7 +83,17 @@ describe Instructor do
   
   end
   
-  it 'authenticate? works as expected' do
-      expect(@instructor.authenticated?('')).to be false
+  describe "authenticate?" do
+    it 'works as expected' do
+        expect(@instructor.authenticated?('')).to be false
+    end
+    
+#    remember_digest.nil
   end
+  
+  # it 'remember works as expected' do
+  #     remember_token = Instructor.new_token  
+  #     update_attribute(:remember_digest, Instructor.digest(remember_token))
+  #     expect(@instructor.authenticated?('')).to be false
+  # end
 end
