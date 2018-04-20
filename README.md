@@ -38,28 +38,28 @@
 ## Iteration 2
 
 * rspec test
-  ** fill here
-  ** fill here
+  * fill here
+  * fill here
 * cumcumber test
-  ** fill here
-  ** fill here
+  * fill here
+  * fill here
 * Add Topic Model
-  ** :name
-  ** Add
-  ** Edit
-  ** Delete
+  * :name
+  * Add
+  * Edit
+  * Delete
   
 ## Iteration 3
 
 * Quiz Model
-  ** a quiz belongs to a topic
-  ** a topic has many quizzes
-  ** delete dependency
-  ** :question :answer :remark
-  ** Add
-  ** Edit
-  ** Delete
-  ** Correct display for return chars
+  * a quiz belongs to a topic
+  * a topic has many quizzes
+  * delete dependency
+  * :question :answer :remark
+  * Add
+  * Edit
+  * Delete
+  * Correct display for return chars
 * Formula
-  ** Mathjax
+  * Mathjax
   
