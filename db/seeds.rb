@@ -67,7 +67,7 @@ D. memcpy();",
 
 topic = Topic.find(3)
 
-topic.quizzes.create!(question: "\(\int_0^1xdx=?\)",
+topic.quizzes.create!(question: "\\(\\int_0^1xdx=?\\)",
                       answer: "0.5",
-                      remark: "\(\int xdx=1/2x^2+C\)"
+                      remark: "\\(\\int xdx=1/2x^2+C\\)"
 )
