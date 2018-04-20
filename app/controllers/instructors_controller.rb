@@ -29,7 +29,7 @@ class InstructorsController < ApplicationController
     @instructor = Instructor.find(params[:id])
   end
   
-    def update
+  def update
     @instructor = Instructor.find(params[:id])
     if @instructor.update_attributes(instructor_params)
       flash[:success] = "Profile updated"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320102023) do
+ActiveRecord::Schema.define(version: 20180420045104) do
 
   create_table "instructors", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20180320102023) do
     t.string "remember_digest"
     t.boolean "admin"
     t.index ["email"], name: "index_instructors_on_email", unique: true
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

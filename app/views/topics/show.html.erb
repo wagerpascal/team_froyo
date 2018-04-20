@@ -1,0 +1,12 @@
+<% provide(:title, @topic.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="topic_info">
+      <h1>
+        <%= @topic.name %>
+      </h1>
+
+      <%= link_to "View all topics", topics_path %>
+    </section>
+  </aside>
+</div>

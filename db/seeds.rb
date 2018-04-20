@@ -17,3 +17,5 @@ Instructor.create!(name:  "Hang Li",
              password:              "123456",
              password_confirmation: "123456",
              admin: true)
+
+Topic.create!(name: "Sample Topic")
