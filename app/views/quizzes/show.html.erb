@@ -1,0 +1,22 @@
+<% provide(:title, "Quiz "+@quiz.id.to_s) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="quiz_info">
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+      <h1>Quiz Topic: </h1>
+      <div class="quizview"><%= @quiz.topic.name%></div>
+
+      <h1>Question: </h1>
+      <div class = "quizview"><%= @quiz.question %></div>
+
+      <h1>Answer: </h1>
+      <div class = "quizview"><%= @quiz.answer %></div>
+
+      <h1>Remark: </h1>
+      <div class = "quizview"><%= @quiz.remark %></div>
+
+      <h1><%= link_to "Edit quiz", edit_quiz_path(@quiz) %> </h1>
+
+    </section>
+  </aside>
+</div>

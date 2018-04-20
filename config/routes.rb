@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :instructors
   resources :topics
+  resources :quizzes
 
   get '/help',  to: 'static_pages#help'
   get '/about',  to: 'static_pages#about'
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   get '/new_topic', to: 'topics#new'
+  get '/new_quiz', to: 'quizzes#new'
   # post '/new_topic', to: 'topics#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

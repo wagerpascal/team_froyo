@@ -1,53 +1,50 @@
-class TopicsController < ApplicationController
+class QuizzesController < ApplicationController
   before_action :logged_in_instructor, only: [:new, :edit, :update, :destroy]
+
   def new
-    @topic = Topic.new
+    @topics = Topic.all
+    @quiz = Quiz.new
+    if(params[:topic_from])
+      @quiz[:topic_id] = params[:topic_from]
+    end
   end
 
   def create
-    @topic = Topic.new(topic_params)
-    if @topic.save
-      log_in @topic
-      flash[:success] = "Create topic successfully!"
-      redirect_to @topic
+    @quiz = Quiz.new(quiz_params)
+    if @quiz.save
+      flash[:success] = "Quiz created!"
+      redirect_to @quiz
     else
       render 'new'
     end
   end
 
+  def index
+    @quizzes = Quiz.paginate(page: params[:page], :per_page =>10)
+  end
+
   def show
-    @topic = Topic.find(params[:id])
-    @quizzes = @topic.quizzes.paginate(page: params[:page], :per_page =>10)
+    @quiz = Quiz.find(params[:id])
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    @quiz = Quiz.find(params[:id])
   end
 
   def update
-    @topic = Topic.find(params[:id])
-    if @topic.update_attributes(topic_params)
-      flash[:success] = "Topic updated"
-      redirect_to @topic
+    @quiz = Quiz.find(params[:id])
+    if @quiz.update_attributes(quiz_params)
+      flash[:success] = "Quiz updated"
+      redirect_to @quiz
     else
       render 'edit'
     end
   end
 
-  def index
-    @topics = Topic.paginate(page: params[:page], :per_page =>10)
-  end
-
-  def destroy
-    Topic.find(params[:id]).destroy
-    flash[:success] = "Instructor deleted"
-    redirect_to topics_url
-  end
-
   private
 
-  def topic_params
-    params.require(:topic).permit(:name)
+  def quiz_params
+    params.require(:quiz).permit(:question, :answer, :remark, :topic_id)
   end
 
   def instructor_params

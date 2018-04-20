@@ -1,12 +1,26 @@
 <% provide(:title, @topic.name) %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-3">
     <section class="topic_info">
       <h1>
         <%= @topic.name %>
       </h1>
 
-      <%= link_to "View all topics", topics_path %>
+      <h2><%= link_to "Edit topic", edit_topic_path(@topic)%></h2>
+
+      <h2><%= link_to "Create new quiz", new_quiz_path(:topic_from => @topic.id)%></h2>
+
+      <h2><%= link_to "View all topics", topics_path %></h2>
     </section>
   </aside>
+
+  <div class="col-md-9">
+    <% if @topic.quizzes.any? %>
+      <h3>Quizzes (<%= @topic.quizzes.count %>)</h3>
+      <ol class="quizzes">
+        <%= render @quizzes %>
+      </ol>
+      <%= will_paginate @quizzes %>
+    <% end %>
+  </div>
 </div>

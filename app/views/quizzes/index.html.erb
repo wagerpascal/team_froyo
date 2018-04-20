@@ -1,0 +1,12 @@
+<% provide(:title, 'All quizzes') %>
+<h1>All quizzes</h1>
+
+<%= will_paginate %>
+
+<ul class="quizzes">
+  <% @quizzes.each do |quiz| %>
+    <%= render quiz %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
