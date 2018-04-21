@@ -7,3 +7,7 @@ Feature: security check by false instructor
   Scenario: 'Try Manage Topics Without Login'
     When I click Create new topic
     Then I should see "Please log in."
+    
+  Scenario: 'Try Manage Questions Without Login'
+    When I click Create new quiz under Data Structures and Algorithms
+    Then I should see "Please log in."
