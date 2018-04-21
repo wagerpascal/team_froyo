@@ -6,7 +6,7 @@ Feature: edit profile by instructor
   
   Background: instructors in database
     
-    Given a user named crazy exists
+    Given an instructor named crazy exists
   
   Scenario: 'Update profile'
     When I log in with crazy's information

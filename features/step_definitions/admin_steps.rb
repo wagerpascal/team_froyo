@@ -1,4 +1,4 @@
-Given(/^a user named crazy exists$/) do
+Given(/^an instructor named crazy exists$/) do
     visit signup_path
     fill_in 'Name', :with => "crazy"
     fill_in 'Email', :with => "crazy@crazy.com"

@@ -6,7 +6,7 @@ Feature: management by admin instructor
   
   Background: instructors in database
     
-    Given a user named crazy exists
+    Given an instructor named crazy exists
   
   Scenario: 'Delete an instructor'
     When I log in with admin's information
