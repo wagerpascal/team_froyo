@@ -14,7 +14,8 @@
 
 describe SessionsController, :type => :controller do
     it "destroy should work as expected" do
-        
+        # redirect_to root_url
+        # subject.should redirect_to 'root_url'
     end
 end
 
