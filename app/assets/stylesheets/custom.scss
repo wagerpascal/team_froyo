@@ -119,6 +119,9 @@ aside {
   section.instructor_info {
     margin-top: 20px;
   }
+  section.topic_info {
+    margin-top: 20px;
+  }
   section {
     padding: 10px 0;
     margin-top: 20px;
@@ -137,6 +140,9 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+    }
+    h2 {
+      text-align: left;
     }
   }
 }
@@ -183,9 +189,19 @@ input {
   margin-left: 0;
 }
 
-/* Users index */
+/* Instructors index */
 
 .instructors {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.topics {
   list-style: none;
   margin: 0;
   li {
@@ -204,4 +220,45 @@ input {
   float: left;
   width: 30%;
   border-bottom: none;
+}
+
+/* problems */
+
+.problems {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .topic {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .question {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.problemview{
+  padding: 20px;
 }
