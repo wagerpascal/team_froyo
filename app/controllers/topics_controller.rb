@@ -8,7 +8,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topic_params)
     if @topic.save
       log_in @topic
-      flash[:success] = "Create topic successfully!"
+      flash[:success] = "Create topic successfully."
       redirect_to @topic
     else
       render 'new'
@@ -27,7 +27,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update_attributes(topic_params)
-      flash[:success] = "Topic updated"
+      flash[:success] = "Topic updated."
       redirect_to @topic
     else
       render 'edit'
@@ -40,7 +40,7 @@ class TopicsController < ApplicationController
 
   def destroy
     Topic.find(params[:id]).destroy
-    flash[:success] = "Instructor deleted"
+    flash[:success] = "Topic deleted."
     redirect_to topics_url
   end
 

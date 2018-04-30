@@ -12,7 +12,7 @@ class ProblemsController < ApplicationController
   def create
     @problem = Problem.new(problem_params)
     if @problem.save
-      flash[:success] = "Problem created!"
+      flash[:success] = "Problem created."
       redirect_to @problem
     else
       render 'new'
@@ -34,7 +34,7 @@ class ProblemsController < ApplicationController
   def update
     @problem = Problem.find(params[:id])
     if @problem.update_attributes(problem_params)
-      flash[:success] = "Problem updated"
+      flash[:success] = "Problem updated."
       redirect_to @problem
     else
       render 'edit'

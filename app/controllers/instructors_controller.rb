@@ -6,7 +6,7 @@ class InstructorsController < ApplicationController
     @instructor = Instructor.new(instructor_params)
     if @instructor.save
       log_in @instructor
-      flash[:success] = "Signed up successfully!"
+      flash[:success] = "Signed up successfully."
       redirect_to @instructor
     else
       render 'new'
@@ -32,7 +32,7 @@ class InstructorsController < ApplicationController
   def update
     @instructor = Instructor.find(params[:id])
     if @instructor.update_attributes(instructor_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Profile updated."
       redirect_to @instructor
     else
       render 'edit'
@@ -41,7 +41,7 @@ class InstructorsController < ApplicationController
   
   def destroy
     Instructor.find(params[:id]).destroy
-    flash[:success] = "Instructor deleted"
+    flash[:success] = "Instructor deleted."
     redirect_to instructors_url
   end
   
