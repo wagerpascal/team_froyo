@@ -1,53 +1,50 @@
-class TopicsController < ApplicationController
+class ProblemsController < ApplicationController
     before_action :logged_in_instructor, only: [:new, :edit, :update, :destroy]
+
   def new
-    @topic = Topic.new
+    @topics = Topic.all
+    @problem = Problem.new
+    if(params[:topic_from])
+      @problem[:topic_id] = params[:topic_from]
+    end
   end
 
   def create
-    @topic = Topic.new(topic_params)
-    if @topic.save
-      log_in @topic
-      flash[:success] = "Create topic successfully!"
-      redirect_to @topic
+    @problem = Problem.new(problem_params)
+    if @problem.save
+      flash[:success] = "Problem created!"
+      redirect_to @problem
     else
       render 'new'
     end
   end
 
+  def index
+    @problems = Problem.paginate(page: params[:page], :per_page =>10)
+  end
+
   def show
-    @topic = Topic.find(params[:id])
-    @problems = @topic.problems.paginate(page: params[:page], :per_page =>10)
+    @problem = Problem.find(params[:id])
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+    @problem = Problem.find(params[:id])
   end
 
   def update
-    @topic = Topic.find(params[:id])
-    if @topic.update_attributes(topic_params)
-      flash[:success] = "Topic updated"
-      redirect_to @topic
+    @problem = Problem.find(params[:id])
+    if @problem.update_attributes(problem_params)
+      flash[:success] = "Problem updated"
+      redirect_to @problem
     else
       render 'edit'
     end
   end
 
-  def index
-    @topics = Topic.paginate(page: params[:page], :per_page =>10)
-  end
-
-  def destroy
-    Topic.find(params[:id]).destroy
-    flash[:success] = "Instructor deleted"
-    redirect_to topics_url
-  end
-
   private
 
-  def topic_params
-    params.require(:topic).permit(:name)
+  def problem_params
+    params.require(:problem).permit(:question, :answer, :remark, :topic_id)
   end
 
   def instructor_params

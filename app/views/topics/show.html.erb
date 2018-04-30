@@ -8,19 +8,19 @@
 
       <h2><%= link_to "Edit topic", edit_topic_path(@topic)%></h2>
 
-      <h2><%= link_to "Create new quiz", new_quiz_path(:topic_from => @topic.id)%></h2>
+      <h2><%= link_to "Create new problem", new_problem_path(:topic_from => @topic.id)%></h2>
 
       <h2><%= link_to "View all topics", topics_path %></h2>
     </section>
   </aside>
 
   <div class="col-md-9">
-    <% if @topic.quizzes.any? %>
-      <h3>Quizzes (<%= @topic.quizzes.count %>)</h3>
-      <ol class="quizzes">
-        <%= render @quizzes %>
+    <% if @topic.problems.any? %>
+      <h3>Problems (<%= @topic.problems.count %>)</h3>
+      <ol class="problems">
+        <%= render @problems %>
       </ol>
-      <%= will_paginate @quizzes %>
+      <%= will_paginate @problems %>
     <% end %>
   </div>
 </div>

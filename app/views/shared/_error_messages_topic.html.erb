@@ -1,12 +1,14 @@
-<% if @topic.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-      The form contains <%= pluralize(@topic.errors.count, "error") %>.
-    </div>
-    <ul>
-      <% @topic.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<% provide(:title, 'All topics') %>
+<h1>All topics</h1>
+
+<h2><%= link_to "Create new topic", new_topic_path %></h2>
+
+<%= will_paginate %>
+
+<ul class="topics">
+  <% @topics.each do |topic| %>
+    <%= render topic %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
