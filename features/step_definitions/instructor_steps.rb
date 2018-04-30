@@ -7,8 +7,8 @@ Then(/^I click View Topics$/) do
   visit topics_path
 end
 
-Then(/^I click View Questions$/) do
-  visit quizzes_path
+Then(/^I click View Problems/) do
+  visit problems_path
 end
 
 Then(/^I click Create new topic$/) do
@@ -34,14 +34,14 @@ Then(/^I click Data Structures and Algorithms$/) do
   find(:xpath, "//a[@href='#{topics_path(@topic).sub! '.', '/'}']", :text => "Data Structures and Algorithms", :match => :first).click
 end
 
-When(/^I click Create new quiz under Data Structures and Algorithms$/) do
+When(/^I click Create new problem under Data Structures and Algorithms$/) do
   @topic = Topic.find_by(name: "Data Structures and Algorithms")
-  visit new_quiz_path(:topic_from => @topic.id)
+  visit new_problem_path(:topic_from => @topic.id)
 end
 
 When("I edit Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer") do
-  @quiz = Quiz.find_by(id: 1)
-  visit edit_quiz_path(@quiz)
+  @problem = Problem.find_by(id: 1)
+  visit edit_problem_path(@problem)
 end
 
 

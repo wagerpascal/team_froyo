@@ -28,6 +28,6 @@ When(/^I log in with crazy's information$/) do
 end
 
 When(/^I select the delete for the crazy instructor$/) do
-    @instructor = Instructor.find_by(name: "crazy")
-    find(:xpath, "//a[@href='#{instructor_path(@instructor)}']", :text => "delete").click
+  @instructor = Instructor.find_by(name: "crazy")
+  find(:xpath, "//a[@href='#{instructor_path(@instructor)}']", :text => "delete").click
 end 

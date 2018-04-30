@@ -1,6 +1,6 @@
 Feature: topic management by instructor
   
-  In order to manage the quizzes
+  In order to manage the prlb
   As an instructor
   I want to be able to manage the topics
   
@@ -65,7 +65,7 @@ Feature: topic management by instructor
     
     
     
-    
+
     
 
     
