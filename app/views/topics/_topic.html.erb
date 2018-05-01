@@ -3,6 +3,6 @@
     <li><%= link_to topic.name, topic %></li>
     <li><%= link_to "edit", edit_topic_path(topic) %></li>
     <li><%= link_to "delete", topic, method: :delete,
-                    data: {confirm: "You sure?"} %></li>
+                    data: {confirm: "Are you sure to delete this topic?"} %></li>
   </ul> 
 </li>

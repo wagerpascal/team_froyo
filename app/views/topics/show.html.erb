@@ -6,11 +6,11 @@
         <%= @topic.name %>
       </h1>
 
-      <h2><%= link_to "Edit topic", edit_topic_path(@topic)%></h2>
+      <h2><%= link_to "Edit Topic", edit_topic_path(@topic)%></h2>
 
-      <h2><%= link_to "Create new problem", new_problem_path(:topic_from => @topic.id)%></h2>
+      <h2><%= link_to "Create New Problem", new_problem_path(:topic_from => @topic.id)%></h2>
 
-      <h2><%= link_to "View all topics", topics_path %></h2>
+      <h2><%= link_to "View All Topics", topics_path %></h2>
     </section>
   </aside>
 
