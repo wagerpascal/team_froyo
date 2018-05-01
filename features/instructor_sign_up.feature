@@ -12,7 +12,7 @@ Feature: sign up by instructor
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
     And I press "Create my account"
-    Then I should see "Signed up successfully!"
+    Then I should see "Signed up successfully."
   
   Scenario: 'Standard Instructor Registration Fail - Name'
     When I am on the signup page 

@@ -22,14 +22,14 @@ Feature: question management by instructor
     Then I should see "All problems"
     And I should see "Data Structures and Algorithms"
     Then I click Data Structures and Algorithms
-    Then I should see "Create new problem"
+    Then I should see "Create New Problem"
     When I click Create new problem under Data Structures and Algorithms
     Then I should see "Create Problem"
     Then I fill in "Question" with "1"
     And I fill in "Answer" with "1"
     And I fill in "Remark" with "1"
     Then I press "Create problem"
-    Then I should see "Problem created!"
+    Then I should see "Problem created."
     
   Scenario: 'Add Problems by Topics with null'
     When I log in with crazy's information
@@ -37,7 +37,7 @@ Feature: question management by instructor
     Then I should see "All problems"
     And I should see "Data Structures and Algorithms"
     Then I click Data Structures and Algorithms
-    Then I should see "Create new problem"
+    Then I should see "Create New Problem"
     When I click Create new problem under Data Structures and Algorithms
     Then I should see "Create Problem"
     Then I fill in "Question" with "1"
@@ -54,7 +54,7 @@ Feature: question management by instructor
     When I edit Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer
     Then I should see "Update Problem"
     Then I fill in "Remark" with "1"
-    And I press "Save changes"
+    And I press "Save Changes"
     Then I should see "Problem updated"
     
   Scenario: 'Edit Problems by Topics with null'
@@ -65,7 +65,7 @@ Feature: question management by instructor
     When I edit Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer
     Then I should see "Update Problem"
     Then I fill in "Answer" with ""
-    And I press "Save changes"
+    And I press "Save Changes"
     Then I should see "Answer can't be blank"
 
     
