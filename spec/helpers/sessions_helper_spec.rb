@@ -31,11 +31,8 @@ describe SessionsHelper do
   
   describe "log_out" do
     it "should work well" do
-      forget(@instructor)
-      #forget(current_instructor)
-      session.delete(:instructor_id)
+      log_out()
       @current_instructor.should be_nil
-      #expect(@current_instructor).to eq(nil)#.should be_nil
     end
   end
 
