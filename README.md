@@ -63,3 +63,17 @@
 * Formula
   * Mathjax
   
+## iteration 4
+
+* Change quiz to problem
+* Problem
+  * Support image
+* Add problem displays controller
+  * Select topics
+  * quiz
+  * flashcard
+  * Remember question answered
+* Instructor System
+  * add instructors to lists
+  * instrusters can be activated wit hcorrect email
+  
