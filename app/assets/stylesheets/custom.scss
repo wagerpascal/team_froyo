@@ -189,6 +189,11 @@ input {
   margin-left: 0;
 }
 
+#instructor_admin {
+  width: auto;
+  margin-left: 0;
+}
+
 /* Instructors index */
 
 .instructors {
@@ -214,11 +219,21 @@ input {
 .ul_two {
   list-style: none;
   border-bottom: none;
-}  
+}
 
 .ul_two li {
   float: left;
   width: 30%;
+  border-bottom: none;
+}
+
+.ul_five {
+  list-style: none;
+  border-bottom: none;
+}
+
+.ul_five li {
+  float: left;
   border-bottom: none;
 }
 
@@ -261,4 +276,12 @@ span.picture {
 
 .problemview{
   padding: 20px;
+}
+
+.instructorview{
+   padding: 20px;
+ }
+
+.buttons{
+  padding: 20px 0pt 20pt 0pt;
 }

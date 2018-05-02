@@ -4,12 +4,17 @@ class SessionsController < ApplicationController
   
   def create
     instructor = Instructor.find_by(email: params[:session][:email].downcase)
-    if instructor && instructor.authenticate(params[:session][:password])
+    if instructor && instructor.authenticate(params[:session][:password]) && instructor.activated
       log_in instructor
       params[:session][:remember_me] == '1' ? remember(instructor) : forget(instructor)
       redirect_back_or instructor
     else
-      flash.now[:danger] = 'Invalid email/password combination.'
+      if instructor && !instructor.activated
+        flash.now[:danger] = 'Account not activated. Please sign up first.'
+      else
+        flash.now[:danger] = 'Invalid email/password combination.'
+      end
+
       render 'new'
     end
   end

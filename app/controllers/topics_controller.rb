@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-    before_action :logged_in_instructor, only: [:new, :edit, :update, :destroy]
+    before_action :logged_in_instructor, only: [:new, :create, :show, :edit, :update, :index, :destroy]
   def new
     @topic = Topic.new
   end

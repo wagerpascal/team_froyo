@@ -1,5 +1,5 @@
 class ProblemsController < ApplicationController
-    before_action :logged_in_instructor, only: [:new, :edit, :update, :destroy]
+    before_action :logged_in_instructor, only: [:new, :create, :index, :show, :edit, :update, :destroy]
 
   def new
     @topics = Topic.all
@@ -40,6 +40,13 @@ class ProblemsController < ApplicationController
       render 'edit'
     end
   end
+
+    def destroy
+      topic = Problem.find(params[:id]).topic
+      Problem.find(params[:id]).destroy
+      flash[:success] = "Problem deleted."
+      redirect_to topic
+    end
 
   private
 

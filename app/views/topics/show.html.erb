@@ -15,8 +15,8 @@
   </aside>
 
   <div class="col-md-9">
+    <h3>Problems (<%= @topic.problems.count %>)</h3>
     <% if @topic.problems.any? %>
-      <h3>Problems (<%= @topic.problems.count %>)</h3>
       <ol class="problems">
         <%= render @problems %>
       </ol>
