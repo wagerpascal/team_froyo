@@ -21,6 +21,10 @@ When(/^I go check the log in page$/) do
   visit login_path
 end
 
+And(/^I add new instructor$/) do
+  visit "/create_instructor"
+end 
+
 When(/^I select the delete for the instructor$/) do
   @instructor = Instructor.find_by(name: "Hang Li")
   find(:xpath, "//a[@href='#{instructor_path(@instructor)}']", :text => "delete").click

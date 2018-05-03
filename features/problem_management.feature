@@ -4,12 +4,8 @@ Feature: question management by instructor
   As an instructor
   I want to be able to manage the problems
   
-  Background: instructors in database
-    
-    Given an instructor named crazy exists
-  
   Scenario: 'View Problems by Topics'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click View Problems
     Then I should see "All problems"
     And I should see "Data Structures and Algorithms"
@@ -17,7 +13,7 @@ Feature: question management by instructor
     Then I should see "Problems"
     
   Scenario: 'Add Problems by Topics'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click View Problems
     Then I should see "All problems"
     And I should see "Data Structures and Algorithms"
@@ -28,11 +24,11 @@ Feature: question management by instructor
     Then I fill in "Question" with "1"
     And I fill in "Answer" with "1"
     And I fill in "Remark" with "1"
-    Then I press "Create problem"
+    Then I press "Create Problem"
     Then I should see "Problem created."
     
   Scenario: 'Add Problems by Topics with null'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click View Problems
     Then I should see "All problems"
     And I should see "Data Structures and Algorithms"
@@ -43,11 +39,11 @@ Feature: question management by instructor
     Then I fill in "Question" with "1"
     And I fill in "Answer" with ""
     And I fill in "Remark" with "1"
-    Then I press "Create problem"
+    Then I press "Create Problem"
     Then I should see "Answer can't be blank"
     
   Scenario: 'Edit Problems by Topics'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click View Problems
     Then I should see "All problems"
     And I should see "Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer"
@@ -57,8 +53,18 @@ Feature: question management by instructor
     And I press "Save Changes"
     Then I should see "Problem updated"
     
+  Scenario: 'Delete Problems by Topics'
+    When I log in with hanna's information
+    Then I click View Problems
+    Then I should see "All problems"
+    And I should see "Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer"
+    When I check Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer
+    Then I should see "Delete Problem"
+    Then I delete Quick sort algorithm is an example of?
+    And I should see "Problem deleted."
+    
   Scenario: 'Edit Problems by Topics with null'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click View Problems
     Then I should see "All problems"
     And I should see "Quick sort algorithm is an example of? A. Greedy approach B. Improved binary search C. Dynamic programming D. Divide and conquer"
