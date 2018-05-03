@@ -4,17 +4,13 @@ Feature: edit profile by instructor
   As an instructor
   I want to be able to edit my profile
   
-  Background: instructors in database
-    
-    Given an instructor named crazy exists
-  
   Scenario: 'Update profile'
-    When I log in with crazy's information
+    When I log in with hanna's information
     Then I click Settings
     Then I should see "Update your profile"
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
-    And I press "Save changes"
+    And I press "Save Changes"
     Then I should see "Profile updated"
     
   

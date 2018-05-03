@@ -4,18 +4,18 @@ Feature: management by admin instructor
   As an admin instructor
   I want to be able to manage all other instructors
   
-  Background: instructors in database
-    
-    Given an instructor named crazy exists
-  
   Scenario: 'Delete an instructor'
-    When I log in with admin's information
+    When I go check the log in page
+    Then I should see "Log in"
+    And I fill in "Email" with "admin@admin.com"
+    And I fill in "Password" with "123456"
+    Then I press "Log in"
     Then I should see "admin@admin.com"
     When I am on the instructors page
-    Then I should see "crazy"
+    Then I should see "Hang Li"
     And I should see "delete"
-    When I select the delete for the crazy instructor
-    Then I should not see "crazy"
+    When I select the delete for the instructor
+    Then I should not see "Hang Li"
     And I should see "Instructor deleted"
 
     

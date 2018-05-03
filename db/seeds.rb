@@ -18,7 +18,14 @@ Instructor.create!(name:  "Hang Li",
              password:              "123456",
              password_confirmation: "123456",
              admin: true,
-             activated: false)
+             activated: true)
+             
+Instructor.create!(name:  "Hanna",
+             email: "hanna@tamu.edu",
+             password:              "123456",
+             password_confirmation: "123456",
+             admin: true,
+             activated: true)
 
 Topic.create!(name: "Data Structures and Algorithms")
 

@@ -1,5 +1,5 @@
 Then(/^I click Settings$/) do
-  @instructor = Instructor.find_by(name: "crazy")
+  @instructor = Instructor.find_by(name: "Hanna")
   visit edit_instructor_path(@instructor)
 end
 

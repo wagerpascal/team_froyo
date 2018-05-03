@@ -11,7 +11,7 @@ Feature: sign up by instructor
     And I fill in "Email" with "hanna@gmail.com"
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
-    And I press "Create my account"
+    And I press "Create My Account"
     Then I should see "Signed up successfully."
   
   Scenario: 'Standard Instructor Registration Fail - Name'
